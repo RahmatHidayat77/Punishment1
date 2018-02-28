@@ -1,0 +1,41 @@
+Penjelasan :
+Source, Export, dan Set.
+
+
+Source adalah perintah bash shell built-in yang mengeksekusi konten file yang dilewatkan sebagai argumen, di shell saat ini. Source hampir sama dengan perintah (.). Atau source dapat digunakan untuk memuat file fungsi apapun ke dalam skrip shell saat ini atau command prompt.
+
+Syntax :
+. filename [arguments]
+source filename [arguments]
+
+Contoh kode :
+source ~/.bashrc
+
+Kode diatas akan memuat ulang setelan bash, untuk bash yang sedang berjalan saat ini.
+
+
+Export digunakan untuk menandai variabel environmet yang akan diekspor ke proses anak yang baru. Dan karenanya, memungkinkan proses anak mewarisi semua variabel yang ditandai.
+
+Contoh kode :
+$ a=linuxcareer.com
+$ echo $a
+linuxcareer.com
+$ export a
+$ bash
+$ echo $a
+linuxcareer.com
+
+Kode diatas akan mengekspor variabel a ke proses anak.
+
+
+Set digunakan untuk mengatur atau menonaktifkan nilai opsi shell dan parameter posisi. Kita dapat mengubah nilai atribut shell dan parameter posisi, atau menampilkan nama dan nilai variabel shell menggunakan perintah set.
+
+Syntax :
+set [options]
+set [-abefhkmnptuvxBCHP] [-o option-name] [--] [arg ...]
+
+Contoh kode :
+set -x //menghidupkan debug
+
+set +x //mematikan debug
+
