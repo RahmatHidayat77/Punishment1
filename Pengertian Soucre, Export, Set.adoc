@@ -39,3 +39,4 @@ set -x //menghidupkan debug
 
 set +x //mematikan debug
 
+//test git SSH
